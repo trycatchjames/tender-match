@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/*
+!dist/.gitignore
+
+# Runtime state
+.cache/*
+!.cache/.gitignore
+.playwright-profile/*
+!.playwright-profile/.gitignore
+
+# User config
+src/tender-fit/positioning-statement.md
+
+# Scraped and classified tender output
+output/*
+!output/.gitignore
+!output/*/
+!output/*/.gitignore
+!output/*/*/
+!output/*/*/.gitignore
+
+# Local files
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example

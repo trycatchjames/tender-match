@@ -1,0 +1,32 @@
+{
+  "name": "tender-scrape",
+  "version": "1.0.0",
+  "description": "Scrape current AusTender ATM items into Markdown.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run scrape && npm run classify:tenders && npm run review",
+    "scrape": "npm run build --silent && node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "classify:tenders": "tsx src/tender-fit/index.ts",
+    "review": "tsx src/review.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@ai-sdk/openai": "^3.0.65",
+    "ai": "^6.0.191",
+    "playwright": "^1.60.0",
+    "turndown": "^7.2.4",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/turndown": "^5.0.6",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  }
+}
